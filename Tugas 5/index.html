@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar, Audio, dan Video</title>
+
+    <style>
+            .gambar-container {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+        .gambar {
+            background-color: white;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+       
+
+        .gambar img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+
+        }
+
+         .gambar img:hover {
+            transform: scale(1.05);
+        }
+
+        .gambar p {
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <section>
+
+        <h1>Gambar, Audio, dan Video</h1>
+
+        <div class="">
+            <h2>Gambar</h2>
+            <div class="gambar-container">
+                <div class="gambar">
+                    <div class="">
+                        <img src="img/laptop-1.jpg" alt="Trulli" width="" >
+                    </div>
+                    <div class="">
+                    <p>Laptop ini cocok digunakan untuk pekerjaan kantoran.</p>
+                    </div>
+                </div>
+                <div class="gambar">
+                    <div class="">
+                        <img src="img/x1-carbon.jpg" alt="Trulli" width="" >
+                    </div>
+                    <div class="">
+                    <p>Laptop ini cocok digunakan untuk kuliah.</p>
+                    </div>
+                </div>
+                <div class="gambar">
+                    <div class="">
+                        <img src="img/keyboard.jpg" alt="Trulli" width="" >
+                    </div>
+                    <div class="">
+                    <p>Keyboard ini cocok digunakan untuk mengetik dengan nyaman.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <h2>Audio</h2>
+            <audio controls autoplay>
+                <source src="audio/masa-ini.mp3" type="audio/mpeg" >
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="">
+            <h2>Video</h2>
+            <video width="320" height="240" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aT60R1cySLM?si=bGZ9JrTgjOD7kruW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        
+    </section>
+
+</body>
+</html>
