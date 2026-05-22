@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>live coding</title>
+</head>
+<body>
+		<form action=""  method="get" >
+		<fieldset>
+		<legend>Form Data Diri</legend>
+		
+		<table>
+			
+			<tr>
+				<td><label for="nim">NIM:</label></td>
+				<td>:</td>
+				<td><input type="text" id="nim" name="nim" placeholder="1125xxxx"></td>
+			</tr>
+			
+			<tr>
+				<td><label for="nama">Nama Mahasiswa:</label></td>
+				<td>:</td>
+				<td><input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap">
+				</td>
+			</tr>
+
+			<tr>
+				<td><label for="alamat">Alamat:</label></td>
+				<td>:</td>
+				<td><textarea id="alamat" name="alamat" rows="4" cols="40" placeholder="Alamat Lengkap"></textarea>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Jenis Kelamin:</label></td>
+				<td>:</td>
+				<td>
+				<label><input type="radio" name="jk" value="pr">Perempuan</label>
+				<label><input type="radio" name="jk" value="lk">Laki-laki</label>
+				</td>
+				
+			</tr>
+			
+			<tr>
+				<td><label for="agama">Agama:</label></td>
+				<td>:</td>
+				<td>
+					<select id="agama" name="agama">
+					<option value="" disabled selected>Pilih Agama</option>
+					<option value="islam">Islam</option>
+					<option value="kristen">Kristen</option>
+					<option value="budha">Budha</option>
+					<option value="Konghucu">Konghucu</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><button type="submit" >Submit</button></td>
+			</tr>
+	
+		</table>
+
+		</fieldset>
+		</form>
+		
+		<hr>
+		<table border="1">
+			<thead>
+			<tr>
+			<th>No</th>
+			<th>NIM</th>
+			<th>NAMA</th>
+			<th>ALAMAT</th>
+			<th>JENIS KELAMIN</th>
+			<th>AGAMA</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>1</td>
+				<td>1125102201</td>
+				<td>Laras</td>
+				<td>Jl. Kepiting</td>
+				<td>Perempuan</td>
+				<td>Islam</td>
+				</tr>
+				
+				<tr>
+				<td>2</td>
+				<td>1125102202</td>
+				<td>Miranda</td>
+				<td>Jl. Basuki</td>
+				<td>Perempuan</td>
+				<td>Islam</td>
+				</tr>
+				
+				<tr>
+				<td>3</td>
+				<td>1125102203</td>
+				<td>Rido</td>
+				<td>Jl. Cempaka</td>
+				<td>Laki-laki</td>
+				<td>Islam</td>
+				</tr>
+			</tbody>
+		</table>
+</body>
+</html>
