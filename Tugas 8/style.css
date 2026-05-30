@@ -4,7 +4,7 @@
   --Poppins: "Poppins", sans-serif;
   --Lexend: "Lexend Exa", sans-serif;
   --color-primary: #2e2d2c;
-  --color-secondary: rgb(104, 104, 104);
+  --color-secondary: #333;
   --bg: #010101;
 }
 
@@ -24,8 +24,9 @@
   justify-items: center;
   align-items: center;
   justify-content: space-evenly;
-  padding: 0 0.7rem;
-  margin-top: 1rem;
+  border-radius: 0 0 5px 5px;
+  padding: 1rem 0.7rem;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -41,6 +42,11 @@
 
 .header-main .nav-menu a:hover {
   color: var(--color-secondary);
+}
+
+.nav-menu {
+  position: relative;
+  right: -18%;
 }
 
 .nav-menu a::after {
@@ -62,6 +68,15 @@
 
 .header-main .nav-menu a:hover::after {
   transform: scaleX(0.5);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.blur {
+  box-shadow: 0px 1.1px 0px black;
+  backdrop-filter: blur(20px);
 }
 
 .home-container {
@@ -200,9 +215,64 @@
 }
 
 .contact-container p {
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
-  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+
+  gap: 40px;
+  margin-top: 2em;
+}
+
+.contact-details {
+  margin-top: 20px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.contact-info .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.contact-info .form-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.contact-info .form-group input,
+.contact-info .form-group textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-info .form-group input:focus,
+.contact-info .form-group textarea:focus {
+  border-color: #333;
+  outline: none;
+}
+
+.contact-info button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
 footer {
@@ -212,4 +282,150 @@ footer {
   text-align: center;
   padding: 10px 0;
   margin-top: 5em;
+}
+
+@media (max-width: 1024px) {
+  .produk-container {
+    margin: 3em 3em 0;
+  }
+
+  .contact-container {
+    margin: 3em 3em 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #hamburger-menu {
+    display: inline-block;
+    color: #333;
+  }
+
+  .header-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+  }
+
+  .header-main .nav-menu {
+    position: absolute;
+    background-color: var(--color-secondary);
+    top: 100%;
+    right: -100%;
+    width: 12rem;
+
+    transition: 0.3s;
+  }
+
+  .header-main .logo {
+    font-size: 1rem;
+  }
+
+  .header-main .nav-menu.active {
+    right: 0;
+  }
+
+  .header-main .nav-menu a {
+    color: #fff;
+    display: block;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .header-main .nav-menu a::after {
+    transform-origin: 0 0;
+  }
+
+  .header-main .nav-menu a:hover::after {
+    transform: scaleX(0.3);
+  }
+
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 7rem;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+
+  .home-para {
+    width: 100%;
+  }
+
+  .home-container h1 {
+    font-size: 30px;
+  }
+  .home-container p {
+    font-size: 13px;
+  }
+
+  .home-container .home-img {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .produk-container {
+    margin: 3em 1.5em 0;
+  }
+
+  .produk-container h1 {
+    font-size: 25px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 340px;
+  }
+  .card p {
+    font-size: 13px;
+  }
+
+  .card-para button {
+    padding: 7px 17px;
+    font-size: 12px;
+  }
+
+  .contact-container {
+    margin: 3em 1.5em 0;
+  }
+
+  .contact-container h1 {
+    font-size: 25px;
+  }
+
+  .contact-container p {
+    font-size: 13px;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info .form-group label {
+    font-size: 13px;
+  }
+
+  .contact-info .form-group input,
+  .contact-info .form-group textarea {
+    font-size: 13px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
 }
