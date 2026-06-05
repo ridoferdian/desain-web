@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-:root {
-  --Poppins: "Poppins", sans-serif;
-  --Lexend: "Lexend Exa", sans-serif;
-  --color-primary: #2e2d2c;
-  --color-secondary: #333;
-  --bg: #010101;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,11 +14,10 @@ html {
 }
 
 .header-main {
-  font-family: var(--Poppins);
+  font-family: "Poppins", sans-serif;
   display: flex;
-  justify-items: center;
-  align-items: center;
   justify-content: space-evenly;
+  align-items: center;
   border-radius: 0 0 5px 5px;
   padding: 1rem 0.7rem;
   position: fixed;
@@ -36,24 +26,18 @@ html {
   top: 0;
   z-index: 9999;
 }
-
-.header-main .nav-menu a {
-  margin-right: 2rem;
-  color: var(--color-primary);
-  font-weight: 600;
-  display: inline-block;
-}
-
-.header-main .nav-menu a:hover {
-  color: var(--color-secondary);
-}
-
-.nav-menu {
+.header-main .nav-menu {
   position: relative;
   right: -18%;
 }
-
-.nav-menu a::after {
+.header-main .nav-menu a {
+  margin-right: 2rem;
+  color: #2e2d2c;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+.header-main .nav-menu a::after {
   content: "";
   display: block;
   position: absolute;
@@ -61,19 +45,16 @@ html {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--color-secondary);
+  background-color: #333;
   transform: scaleX(0);
   transition: transform 0.3s linear;
 }
-
-.header-main .nav-menu a {
-  position: relative;
+.header-main .nav-menu a:hover {
+  color: #333;
 }
-
 .header-main .nav-menu a:hover::after {
   transform: scaleX(0.5);
 }
-
 #hamburger-menu {
   display: none;
 }
@@ -85,41 +66,34 @@ html {
 
 .home-container {
   display: flex;
-  /* gap: 20px; */
   justify-content: space-evenly;
   align-items: center;
   margin-top: 7em;
   scroll-margin-top: 5rem;
 }
-
-.home-para {
-  font-family: var(--Lexend);
+.home-container .home-para {
+  font-family: "Lexend Exa", sans-serif;
   width: 400px;
   height: auto;
 }
-
-.home-para h1 {
+.home-container .home-para h1 {
   font-size: 36px;
 }
-
-.home-para p {
+.home-container .home-para p {
   font-size: 14px;
   color: #333;
   padding-top: 10px;
 }
-
 .home-container .home-img img {
   width: 300px;
   object-fit: cover;
 }
 
 .produk-container {
-  font-family: var(--Poppins);
-  margin: 0 10em;
-  margin-top: 5em;
+  font-family: "Poppins", sans-serif;
+  margin: 5em 10em 0;
   scroll-margin-top: 5rem;
 }
-
 .produk-container h1 {
   font-size: 30px;
   margin-bottom: 20px;
@@ -128,8 +102,9 @@ html {
 
 .card-container {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
   margin-top: 2em;
 }
 
@@ -140,7 +115,6 @@ html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
-
 .card img {
   width: 100%;
   height: auto;
@@ -148,42 +122,40 @@ html {
   object-fit: cover;
   transition: transform 0.4s ease;
 }
-
 .card img:hover {
   transform: scale(1.05);
 }
-
-.card-para {
-  padding: 15px;
-}
-
 .card p {
   font-size: 14px;
   color: #333;
 }
-
-.card-para button {
+.card .card-para {
+  padding: 15px;
+}
+.card .card-para button {
   background-color: #333;
-  color: white;
+  color: #fff;
   border: none;
-  margin-top: 10px;
-  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease;
+}
+.card .card-para button:hover {
+  background-color: #555;
+}
+.card .card-para button {
+  margin-top: 10px;
+  padding: 10px 20px;
   font-size: 13px;
-  font-family: var(--Poppins);
   transition: transform 0.5s ease-in-out;
 }
 
-.card-para button:hover {
-  background-color: #555;
-}
-
 .wrapper {
-  font-family: var(--Poppins);
+  font-family: "Poppins", sans-serif;
   overflow: hidden;
   background-color: #333;
-  color: white;
+  color: #fff;
   padding: 14px 0;
   margin-top: 4em;
   white-space: nowrap;
@@ -193,7 +165,6 @@ html {
   display: inline-block;
   animation: marquee 18s linear infinite;
 }
-
 .trak span {
   font-size: 16px;
   font-weight: 500;
@@ -208,18 +179,16 @@ html {
     transform: translateX(-50%);
   }
 }
-
 .contact-container {
-  font-family: var(--Poppins);
-  margin: 0 10em;
-  margin-top: 5em;
+  font-family: "Poppins", sans-serif;
+  margin: 5em 10em 0;
+  scroll-margin-top: 5rem;
 }
 .contact-container h1 {
   font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
 }
-
 .contact-container p {
   font-size: 16px;
   color: #333;
@@ -228,13 +197,49 @@ html {
 .contact-info {
   display: flex;
   justify-content: center;
-
+  align-items: center;
   gap: 40px;
   margin-top: 2em;
 }
-
-.contact-details {
+.contact-info .contact-details {
   margin-top: 20px;
+}
+.contact-info .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.contact-info .form-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.contact-info .form-group input,
+.contact-info .form-group textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.contact-info .form-group input:focus,
+.contact-info .form-group textarea:focus {
+  border-color: #333;
+  outline: none;
+}
+.contact-info button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease;
+}
+.contact-info button:hover {
+  background-color: #555;
+}
+.contact-info button {
+  padding: 8px 30px;
+  font-size: 14px;
 }
 
 .form-container {
@@ -245,46 +250,10 @@ html {
   width: 400px;
 }
 
-.contact-info .form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.contact-info .form-group label {
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-
-.contact-info .form-group input,
-.contact-info .form-group textarea {
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.contact-info .form-group input:focus,
-.contact-info .form-group textarea:focus {
-  border-color: #333;
-  outline: none;
-}
-
-.contact-info button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 8px 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
 footer {
-  font-family: var(--Poppins);
+  font-family: "Poppins", sans-serif;
   background-color: #333;
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 10px 0;
   margin-top: 5em;
@@ -294,42 +263,35 @@ footer {
   .produk-container {
     margin: 3em 3em 0;
   }
-
   .contact-container {
     margin: 3em 3em 0;
   }
 }
-
 @media (max-width: 768px) {
   #hamburger-menu {
     display: inline-block;
     color: #333;
   }
-
   .header-main {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 1rem;
   }
-
-  .header-main .nav-menu {
-    position: absolute;
-    background-color: var(--color-secondary);
-    top: 100%;
-    right: -100%;
-    width: 12rem;
-
-    transition: 0.3s;
-  }
-
   .header-main .logo {
     font-size: 1rem;
   }
-
+  .header-main .nav-menu {
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    right: -100%;
+    width: 12rem;
+    transition: 0.3s;
+  }
   .header-main .nav-menu.active {
     right: 0;
   }
-
   .header-main .nav-menu a {
     color: #fff;
     display: block;
@@ -337,7 +299,6 @@ footer {
     padding: 0.5rem;
     font-size: 1rem;
   }
-
   .home-container {
     flex-direction: column;
     text-align: center;
@@ -345,18 +306,15 @@ footer {
     align-items: center;
     padding: 0 1.5rem;
   }
-
-  .home-para {
+  .home-container .home-para {
     width: 100%;
   }
-
   .home-container h1 {
     font-size: 30px;
   }
   .home-container p {
     font-size: 13px;
   }
-
   .home-container .home-img {
     margin-top: 1.5rem;
     display: flex;
@@ -364,20 +322,17 @@ footer {
     width: 100%;
     max-width: 200px;
   }
-
   .produk-container {
     margin: 3em 1.5em 0;
   }
   .produk-container h1 {
     font-size: 25px;
   }
-
   .card-container {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
   }
-
   .card {
     width: 100%;
     max-width: 340px;
@@ -385,45 +340,37 @@ footer {
   .card p {
     font-size: 13px;
   }
-
-  .card-para button {
+  .card .card-para button {
     padding: 7px 17px;
     font-size: 12px;
   }
-
   .contact-container {
     margin: 3em 1.5em 0;
-    scroll-margin-top: 5rem;
   }
-
   .contact-container h1 {
     font-size: 25px;
   }
-
   .contact-container p {
     font-size: 13px;
   }
-
-  .form-container {
-    width: 100%;
-    max-width: 300px;
-  }
-
   .contact-info {
     flex-direction: column;
     align-items: center;
   }
-
   .contact-info .form-group label {
     font-size: 13px;
   }
-
   .contact-info .form-group input,
   .contact-info .form-group textarea {
     font-size: 13px;
   }
-
+  .form-container {
+    width: 100%;
+    max-width: 300px;
+  }
   footer {
     font-size: 10px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
