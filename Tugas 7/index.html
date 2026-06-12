@@ -5,6 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tugas 7</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        list-style: none;
+      }
+
+      .header-main {
+        font-family: var(--Poppins);
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 0.7rem;
+        margin-top: 1rem;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 9999;
+      }
+
+      .header-main .nav-menu a {
+        margin-right: 2rem;
+        color: var(--color-primary);
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      .header-main .nav-menu a:hover {
+        color: var(--color-secondary);
+      }
+
+      .nav-menu a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-secondary);
+        transform: scaleX(0);
+        transition: transform 0.3s linear;
+      }
+
+      .header-main .nav-menu a {
+        position: relative;
+      }
+
+      .header-main .nav-menu a:hover::after {
+        transform: scaleX(0.5);
+      }
+
+      .home-container {
+        display: flex;
+        /* gap: 20px; */
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 7em;
+      }
+
+      .home-para {
+        font-family: var(--Lexend);
+        width: 400px;
+        height: auto;
+      }
+
+      .home-para h1 {
+        font-size: 36px;
+      }
+
+      .home-para p {
+        font-size: 14px;
+        color: #333;
+        padding-top: 10px;
+      }
+
+      .home-container .home-img img {
+        width: 300px;
+        object-fit: cover;
+      }
+
+      .produk-container {
+        font-family: var(--Poppins);
+        margin: 0 10em;
+        margin-top: 5em;
+      }
+
+      .produk-container h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .card-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 2em;
+      }
+
+      .card {
+        background-color: white;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .card img:hover {
+        transform: scale(1.05);
+      }
+
+      .card-para {
+        padding: 15px;
+      }
+
+      .card p {
+        font-size: 14px;
+        color: #333;
+      }
+
+      .card-para button {
+        background-color: #333;
+        color: white;
+        border: none;
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 13px;
+        font-family: var(--Poppins);
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .card-para button:hover {
+        background-color: #555;
+      }
+
+      .wrapper {
+        font-family: var(--Poppins);
+        overflow: hidden;
+        background-color: #333;
+        color: white;
+        padding: 14px 0;
+        margin-top: 4em;
+        white-space: nowrap;
+      }
+
+      .trak {
+        display: inline-block;
+        animation: marquee 18s linear infinite;
+      }
+
+      .trak span {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 24px;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .contact-container {
+        font-family: var(--Poppins);
+        margin: 0 10em;
+        margin-top: 5em;
+      }
+      .contact-container h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .contact-container p {
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+      }
+
+      footer {
+        font-family: var(--Poppins);
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 5em;
+      }
+    </style>
   </head>
   <body>
     <header class="header">

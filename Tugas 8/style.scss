@@ -97,10 +97,6 @@ html {
       }
     }
   }
-
-  .logo {
-    // placeholder for logo styles
-  }
 }
 
 #hamburger-menu {
@@ -218,8 +214,12 @@ html {
 }
 
 @keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .contact-container {
@@ -295,7 +295,6 @@ footer {
   padding: 10px 0;
   margin-top: 5em;
 }
-
 
 @media (max-width: 1024px) {
   .produk-container {

@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// =====================
+// Variables
+// =====================
+$font-poppins: "Poppins", sans-serif;
+$font-lexend: "Lexend Exa", sans-serif;
+
+$color-primary: #2e2d2c;
+$color-secondary: rgb(104, 104, 104);
+$color-text: #333;
+$color-white: white;
+$color-bg: #010101;
+$color-shadow: rgba(0, 0, 0, 0.1);
+
+$border-radius-sm: 5px;
+$border-radius-md: 10px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.header-main {
+  font-family: $font-poppins;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 0.7rem;
+  margin-top: 1rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+
+  .nav-menu a {
+    margin-right: 2rem;
+    color: $color-primary;
+    font-weight: 600;
+    display: inline-block;
+  }
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 7em;
+
+  .home-img img {
+    width: 300px;
+    object-fit: cover;
+  }
+}
+
+.home-para {
+  font-family: $font-lexend;
+  width: 400px;
+  height: auto;
+
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-text;
+    padding-top: 10px;
+  }
+}
+
+.produk-container {
+  font-family: $font-poppins;
+  margin: 5em 10em 0;
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.card {
+  background-color: $color-white;
+  overflow: hidden;
+  border-radius: $border-radius-md;
+  box-shadow: 0 4px 8px $color-shadow;
+  width: 300px;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-text;
+  }
+
+  .card-para {
+    padding: 15px;
+
+    button {
+      background-color: $color-text;
+      color: $color-white;
+      border: none;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: $border-radius-sm;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out;
+      font-size: 13px;
+      font-family: $font-poppins;
+    }
+  }
+}
+
+.contact-container {
+  font-family: $font-poppins;
+  margin: 5em 10em 0;
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-text;
+    text-align: center;
+  }
+}
+
+footer {
+  font-family: $font-poppins;
+  background-color: $color-text;
+  color: $color-white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 5em;
+}

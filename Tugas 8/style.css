@@ -55,6 +55,7 @@ html {
 .header-main .nav-menu a:hover::after {
   transform: scaleX(0.5);
 }
+
 #hamburger-menu {
   display: none;
 }
