@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --font-baloo: "Baloo 2", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-caveat: "Caveat", cursive;
+
+  --color-primary: #fbcbd0;
+  --color-secondary: #f7acb5;
+  --color-cokelat: #5a3e36;
+  --color-cokelat-second: #7a5548;
+  --color-putih-tulang: #fff8f2;
+
+  --shadow-soft: 0 10px 40px -10px rgba(90, 62, 54, 0.15);
+}
+
+.variant-item {
+  @apply relative p-6 rounded-4xl bg-putih-tulang/60 backdrop-blur-sm border border-putih-tulang/80 shadow-soft transition-all duration-300 text-center cursor-pointer;
+}
